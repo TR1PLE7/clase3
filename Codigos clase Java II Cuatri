@@ -1,0 +1,190 @@
+import java.util.Scanner;
+
+public class CreacionTriangulo {
+    public static void main(String[] args){
+        String simbolo = "*";
+        String resultado = "";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite las filas del triangulo");
+        int numero = scanner.nextInt();
+
+    
+        for(int i=0;i<numero;i++){
+            resultado += simbolo;
+            System.out.println(resultado);
+        }
+
+    scanner.close();
+    }
+
+    
+}
+
+import javax.swing.JOptionPane;
+public class cuadrado {
+    public static void main(String[] args){
+
+        int numero = 20;
+        
+
+        for(int i=numero;i<=30;i++){
+            if(numero<=30){
+                if (numero>=20){
+                    int exponente = numero * numero;
+                    JOptionPane.showMessageDialog(null, "El numero"+numero+"elevado es "+exponente+"\n");
+                    numero +=1;
+                }
+                
+            }   
+            
+        }
+       
+
+    }
+    
+}
+
+
+public class Practica {
+    public static void main(String[] args){
+        int altura = 5;
+        int ancho = 10;
+        String simbolo = "@";
+
+        for(int i = 0;i<altura;i++){
+            for(int x=0;x<ancho;x++){
+                System.out.print(simbolo);
+            }
+            System.out.println(simbolo);
+        }      
+       
+    }  
+    
+}
+  
+
+
+
+import javax.swing.JOptionPane;
+
+public class ProgramaEstudiantes {
+    public static void main(String[] args) {
+        // Variables para el cálculo
+        double sumaNotas = 0;
+        double notaMayor = 0;
+        double notaMenor = 100;
+        int cantidadAprobados = 0;
+        int cantidadEstudiantes = 0;
+
+        // Solicitar la nota para cada estudiante y realizar los cálculos
+        double nota = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la nota del estudiante (ingrese un número negativo para finalizar):"));
+
+        while (nota >= 0) {
+            // Acumular la suma de las notas
+            sumaNotas += nota;
+
+            // Actualizar la nota mayor
+            if (nota > notaMayor) {
+                notaMayor = nota;
+            }
+
+            // Actualizar la nota menor
+            if (nota < notaMenor) {
+                notaMenor = nota;
+            }
+
+            // Contar la cantidad de estudiantes aprobados
+            if (nota >= 70) {
+                cantidadAprobados++;
+            }
+
+            cantidadEstudiantes++;
+
+            // Solicitar la nota para el siguiente estudiante
+            nota = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la nota del estudiante (ingrese un número negativo para finalizar):"));
+        }
+
+        // Verificar si se ingresaron estudiantes
+        if (cantidadEstudiantes > 0) {
+            // Calcular la nota promedio
+            double promedio = sumaNotas / cantidadEstudiantes;
+
+            // Mostrar los resultados utilizando JOptionPane
+            JOptionPane.showMessageDialog(null, "Nota promedio: " + promedio +
+                                                "\nNota mayor: " + notaMayor +
+                                                "\nNota menor: " + notaMenor +
+                                                "\nCantidad de estudiantes aprobados: " + cantidadAprobados);
+        } else {
+            JOptionPane.showMessageDialog(null, "No se ingresaron estudiantes.");
+        }
+    }
+}
+
+
+
+import javax.swing.JOptionPane;
+
+public class TabladeMultiplicar {
+    public static void main(String[] args) {
+        String numeroStr = JOptionPane.showInputDialog("Ingrese el numero que desee multiplicar:");
+        int numero = Integer.parseInt(numeroStr);
+        
+        
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            
+            JOptionPane.showMessageDialog(null, numero + " x " + i + " = " + resultado);
+        }
+        
+    }
+}
+
+import javax.swing.JOptionPane;
+
+public class CalculoNotas {
+    public static void main(String[] args) {
+        // Solicitar la cantidad de estudiantes
+        int cantidadEstudiantes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de estudiantes:"));
+        
+        // Variables para el cálculo
+        double sumaNotas = 0;
+        double notaMayor = 0;
+        double notaMenor = 100;
+        int cantidadAprobados = 0;
+        
+        // Solicitar la nota para cada estudiante y realizar los cálculos
+        for (int i = 1; i <= cantidadEstudiantes; i++) {
+            double nota = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la nota del estudiante " + i + ":"));
+            
+            // Acumular la suma de las notas
+            sumaNotas += nota;
+            
+            // Actualizar la nota mayor
+            if (nota > notaMayor) {
+                notaMayor = nota;
+            }
+            
+            // Actualizar la nota menor
+            if (nota < notaMenor) {
+                notaMenor = nota;
+            }
+            
+            // Contar la cantidad de estudiantes aprobados
+            if (nota >= 70) {
+                cantidadAprobados++;
+            }
+        }
+        
+        // Calcular la nota promedio
+        double promedio = sumaNotas / cantidadEstudiantes;
+        
+        // Mostrar los resultados utilizando JOptionPane
+        JOptionPane.showMessageDialog(null, "Nota promedio: " + promedio +
+                                            "\nNota mayor: " + notaMayor +
+                                            "\nNota menor: " + notaMenor +
+                                            "\nCantidad de estudiantes aprobados: " + cantidadAprobados);
+    }
+}
+
+    
